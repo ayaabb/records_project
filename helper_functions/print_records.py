@@ -1,4 +1,5 @@
 def print_records_with_details(records, list_names, index=False, copies=False, new_record=False):
+    print("These results founded:")
     if not index and copies:
         """Search function"""
         for name in list_names:

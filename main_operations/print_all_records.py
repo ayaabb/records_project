@@ -11,5 +11,5 @@ def print_all_records():
         print("No records founded!")
         return
     for record in sorted_names:
-        log_messages_to_file("Print All",record, str(records[record]))
+        log_messages_to_file("Print All", record, str(records[record]))
     print_records_with_details(records, sorted_names, copies=True)

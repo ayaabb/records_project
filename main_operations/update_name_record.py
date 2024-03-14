@@ -7,16 +7,17 @@ from main_operations.delete_record import *
 def update_name(old_name, new_name):
     try:
         records = get_record_dict()
-        record_name , old_copies ,updated =remove_record_to_overwrite(records,old_name,'update')
-        if updated == False:
+        record_name, old_copies, updated = remove_record_to_overwrite(records, old_name, "update it's name")
+        if not updated:
             print("Record name doesn't found")
             raise Exception
-       
+
         write_to_file(new_name + ", " + str(old_copies))
         log_messages_to_file("Update name", "Success")
-        print(f"{record_name} record name update succeed")
-        
-            
-    except Exception as e:
+        print(f"'{record_name}' record name update succeed")
+
+
+    except Exception:
         log_messages_to_file("Update name", "Failure")
-        print(f"{old_name} record name update failed")
+        print(f"'{old_name}' record name update failed")
+    print("\n")
