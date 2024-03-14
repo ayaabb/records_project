@@ -5,5 +5,4 @@ def ask_for_option_record(option_range, remove_or_add):
     option = int(input())
     while not 0 < option <= option_range:
         option = int(input(f"Invalid selection. Please choose a number between 1 and {option_range}:"))
-
     return option
