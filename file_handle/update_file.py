@@ -20,9 +20,9 @@ def remove_line_from_file(name_to_delete):
     modified_lines = []
     file_copies = 0
     for line in lines:
-        line_split = (line.strip()).split(' ,')
-        if name_to_delete == line_split[1]:
-            file_copies = int(line_split[0])
+        line_split = (line.strip()).split(', ')
+        if name_to_delete == line_split[0]:
+            file_copies = int(line_split[1])
         else:
             modified_lines.append(line)
     with open(file_name, "w") as output:

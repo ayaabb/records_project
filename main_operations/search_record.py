@@ -1,8 +1,6 @@
-import os
-
-from log_to_file import *
-from print_records import print_records_with_details
-from convert_txtFile_to_dictionary import get_record_dict
+from log.log_to_file import *
+from helper_functions.print_records import print_records_with_details
+from file_handle.convert_txtFile_to_dictionary import get_record_dict
 
 
 def search_record(record_name):
