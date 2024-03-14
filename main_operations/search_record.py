@@ -6,7 +6,7 @@ from file_handle.convert_txtFile_to_dictionary import get_record_dict
 def search_record(record_name):
     records = get_record_dict()
     list_record_names = search_record_by_substring(record_name, records)
-
+    print(f"Searching for '{record_name}'")
     if len(list_record_names) == 0:
         print(f"Record search failed: No results found for the {record_name}")
         log_messages_to_file('Search', 'Failed')
@@ -14,6 +14,7 @@ def search_record(record_name):
         log_messages_to_file('Search', 'Succeed')
         print("Search results:")
         print_records_with_details(records, sorted(list_record_names), copies=True)
+    print("\n")
 
 
 def search_record_by_substring(record_name, records):
